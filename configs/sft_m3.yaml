@@ -1,0 +1,36 @@
+model:
+  preset: 100m
+  max_length: 8192
+  query_chunk: 128
+  checkpoint_blocks: true
+  dropout: 0.05
+training:
+  stage: sft
+  seed: 17
+  precision: auto
+  microbatch_size: 1
+  gradient_accumulation: 16
+  max_steps: 12000
+  learning_rate: 0.00002
+  head_lr_multiplier: 5.0
+  warmup_steps: 300
+  weight_decay: 0.01
+  clip_norm: 1.0
+  graph_dropout: 0.15
+  evaluate_every: 200
+  validation_max_samples: 4000
+  evaluation_batch_size: 1
+  early_stopping_patience: 8
+  log_every: 10
+  keep_checkpoints: 3
+  mps_memory_fraction: 0.85
+  loss_weights:
+    risk: 1.0
+    positive_weight: 3.0
+    cwe: 0.2
+    family: 0.1
+    roles: 0.5
+    edges: 0.3
+    adequacy: 0.3
+    pair: 0.2
+    teacher: 0.0

@@ -1,0 +1,67 @@
+{
+  "id": "synthetic-format-demo:before",
+  "group_id": "synthetic-format-demo",
+  "repo": "example-only/not-real",
+  "split": "train",
+  "code": "int read_at(int i){int a[4]={1,2,3,4};return a[i];}",
+  "label": 1,
+  "target_span": [
+    0,
+    51
+  ],
+  "label_scope": "synthetic bounds example with caller-controlled index",
+  "adequate": 1,
+  "cwes": [
+    "CWE-125"
+  ],
+  "known_cwes": [
+    "CWE-125",
+    "CWE-416"
+  ],
+  "evidence": [
+    {
+      "start": 45,
+      "end": 49,
+      "roles": {
+        "risky_operation": 1,
+        "guard": 0
+      }
+    }
+  ],
+  "graph": {
+    "nodes": [
+      {
+        "start": 0,
+        "end": 51
+      },
+      {
+        "start": 45,
+        "end": 49
+      }
+    ],
+    "edges": [
+      {
+        "src": 0,
+        "dst": 1,
+        "type": "ast_child",
+        "evidence": null
+      }
+    ]
+  },
+  "mate": {
+    "id": "synthetic-format-demo:fixed",
+    "group_id": "synthetic-format-demo",
+    "repo": "example-only/not-real",
+    "split": "train",
+    "code": "int read_at(int i){int a[4]={1,2,3,4};if(i<0||i>=4)return -1;return a[i];}",
+    "label": 0,
+    "adequate": 1,
+    "known_cwes": [
+      "CWE-125",
+      "CWE-416"
+    ]
+  },
+  "pair_relation": "higher",
+  "pair_verified": true,
+  "source": "ORIGINAL SYNTHETIC FORMAT EXAMPLE ONLY; not a real reviewed vulnerability case"
+}

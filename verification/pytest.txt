@@ -1,0 +1,5 @@
+............s................s..                                         [100%]
+=========================== short test summary info ============================
+SKIPPED [1] tests/test_data.py:116: Optional public-data/tokenizer dependency not installed
+SKIPPED [1] tests/test_model.py:113: Apple MPS hardware unavailable
+30 passed, 2 skipped in 2.28s

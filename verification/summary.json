@@ -1,0 +1,42 @@
+{
+  "date": "2026-09-06",
+  "tests": {
+    "passed": 30,
+    "skipped": 2,
+    "skips": [
+      "MPS hardware not available",
+      "Optional tokenizers dependency unavailable; no internet in build runtime"
+    ]
+  },
+  "full_model_cpu": {
+    "passed": true,
+    "context": 64,
+    "torch": "2.10.0+cpu",
+    "parameters_including_mlm": 99996650,
+    "parameters_without_mlm_head": 99553002,
+    "test": "graph security + MLM forward/backward, gradient clipping, AdamW"
+  },
+  "offline_integration": {
+    "passed": true,
+    "stages": [
+      "pretrain",
+      "sft",
+      "align",
+      "calibrate",
+      "evaluate"
+    ],
+    "model": "tiny diagnostic, not the full model",
+    "data": "original synthetic fixtures",
+    "tokenizer": "diagnostic byte tokenizer"
+  },
+  "exact_cpu_resume": "bit-for-bit weight comparison passed with dropout, optimizer/RNG/cursor restoration",
+  "not_executed": [
+    "MPS training",
+    "real public-dataset download",
+    "real BPE tokenizer training",
+    "real-corpus full pretraining",
+    "vulnerability benchmark comparisons"
+  ],
+  "weights_in_archive": false,
+  "security_accuracy_claim": null
+}

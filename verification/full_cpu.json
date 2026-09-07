@@ -1,0 +1,44 @@
+{
+  "python": "3.13.5",
+  "platform": "Linux-6.18.35-x86_64-with-glibc2.41",
+  "machine": "x86_64",
+  "torch": "2.10.0+cpu",
+  "unified_or_system_ram_gib": 5.81,
+  "available_system_ram_gib": 4.69,
+  "mps_built": false,
+  "mps_available": false,
+  "mps_fallback": "0",
+  "mps_fast_math": "0",
+  "mps_prefer_metal": "default",
+  "selected_device": "cpu",
+  "precision": "fp32",
+  "precision_probe": "Requested FP32",
+  "full_100m_model": true,
+  "benchmark_sequence_length": 64,
+  "parameters": {
+    "training_model": 99996650,
+    "inference_model": 99553002,
+    "trainable_now": 99996650
+  },
+  "passed": true,
+  "two_objective_optimizer_step_seconds": 1.1972769650001283,
+  "input_tokens_per_second_two_forwards": 106.9092647247133,
+  "finite_losses": [
+    9.310541152954102
+  ],
+  "runtime_after_steps": {
+    "python": "3.13.5",
+    "platform": "Linux-6.18.35-x86_64-with-glibc2.41",
+    "machine": "x86_64",
+    "torch": "2.10.0+cpu",
+    "unified_or_system_ram_gib": 5.81,
+    "available_system_ram_gib": 2.99,
+    "mps_built": false,
+    "mps_available": false,
+    "mps_fallback": "0",
+    "mps_fast_math": "0",
+    "mps_prefer_metal": "default",
+    "selected_device": "cpu"
+  },
+  "interpretation": "Implementation/performance diagnostic only. No vulnerability benchmark accuracy is measured."
+}

@@ -1,0 +1,78 @@
+{
+  "passed": true,
+  "device_requested": "cpu",
+  "stages": [
+    {
+      "step": 4,
+      "seen_tokens": 1011,
+      "last_saved_step": 4,
+      "validation": {
+        "validation_loss": 5.978362171589827,
+        "evaluated_cache_records": 12,
+        "available_cache_records": 12
+      },
+      "run": "/mnt/data/sectrace-final-smoke/pretrain"
+    },
+    {
+      "step": 4,
+      "seen_tokens": 1011,
+      "last_saved_step": 4,
+      "validation": {
+        "validation_loss": 1.3853283921877544,
+        "evaluated_cache_records": 12,
+        "available_cache_records": 12,
+        "n": 12,
+        "positives": 6,
+        "prevalence": 0.5,
+        "threshold": 0.5,
+        "tp": 6,
+        "fp": 6,
+        "tn": 0,
+        "fn": 0,
+        "precision": 0.5,
+        "recall": 1.0,
+        "fpr": 1.0,
+        "f1": 0.6666666666666666,
+        "brier": 0.25001564853015973,
+        "auprc": 0.3692099567099567,
+        "auroc": 0.1111111111111111,
+        "diagnostic_recall_at_fpr_0.01": 0.0,
+        "diagnostic_recall_at_fpr_0.001": 0.0,
+        "diagnostic_vd_score_at_1pct_fpr": 1.0,
+        "zero_fp_95pct_upper_bound": null
+      },
+      "run": "/mnt/data/sectrace-final-smoke/sft"
+    },
+    {
+      "step": 4,
+      "seen_tokens": 2000,
+      "last_saved_step": 4,
+      "validation": {
+        "validation_loss": 1.3827678362528484,
+        "evaluated_cache_records": 12,
+        "available_cache_records": 12,
+        "n": 12,
+        "positives": 6,
+        "prevalence": 0.5,
+        "threshold": 0.5,
+        "tp": 6,
+        "fp": 6,
+        "tn": 0,
+        "fn": 0,
+        "precision": 0.5,
+        "recall": 1.0,
+        "fpr": 1.0,
+        "f1": 0.6666666666666666,
+        "brier": 0.2500015873900443,
+        "auprc": 0.6118686868686869,
+        "auroc": 0.5555555555555556,
+        "diagnostic_recall_at_fpr_0.01": 0.0,
+        "diagnostic_recall_at_fpr_0.001": 0.0,
+        "diagnostic_vd_score_at_1pct_fpr": 1.0,
+        "zero_fp_95pct_upper_bound": null
+      },
+      "run": "/mnt/data/sectrace-final-smoke/align"
+    }
+  ],
+  "interpretation": "Pipeline execution test only: synthetic code, diagnostic byte tokenizer, tiny model. NOT evidence of security quality."
+}

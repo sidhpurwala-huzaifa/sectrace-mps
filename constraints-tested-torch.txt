@@ -1,0 +1,2 @@
+# CPU-tested API baseline. Apple wheels still require the included MPS diagnostic.
+torch==2.10.0

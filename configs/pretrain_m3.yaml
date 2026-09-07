@@ -1,0 +1,28 @@
+# Mac pilot: NOT the complete research pretraining budget.
+model:
+  preset: 100m
+  max_length: 8192
+  query_chunk: 128
+  checkpoint_blocks: true
+  dropout: 0.0
+training:
+  stage: pretrain
+  seed: 17
+  precision: auto
+  microbatch_size: 1
+  gradient_accumulation: 16
+  max_steps: 40000
+  target_tokens: 300000000
+  learning_rate: 0.0003
+  warmup_steps: 1000
+  min_lr_fraction: 0.1
+  weight_decay: 0.1
+  clip_norm: 1.0
+  mask_probability: 0.15
+  graph_dropout: 0.1
+  evaluate_every: 500
+  validation_max_samples: 1000
+  evaluation_batch_size: 1
+  log_every: 10
+  keep_checkpoints: 3
+  mps_memory_fraction: 0.85
